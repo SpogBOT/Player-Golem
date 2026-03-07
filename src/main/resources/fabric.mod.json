@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "playergolem",
+  "version": "${version}",
+  "name": "PlayerGolem",
+  "description": "Copper Golems now look just like your friends!...If you name them like your friends!",
+  "authors": ["SpogBOT"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/playergolem/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "net.spogbot.playergolem.client.PlayergolemDataGenerator"
+    ],
+    "client": [
+      "net.spogbot.playergolem.client.PlayergolemClient"
+    ],
+    "main": [
+      "net.spogbot.playergolem.Playergolem"
+    ]
+  },
+  "mixins": [
+    "playergolem.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
